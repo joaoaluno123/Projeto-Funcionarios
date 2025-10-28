@@ -1,4 +1,4 @@
-name: Frontend Workflow # Nome do workflow
+name: Workflow # Nome do workflow
 
 on: # Quando e em que condições o workflow será executado
   push: # Executar em push para a branch main
@@ -9,10 +9,6 @@ on: # Quando e em que condições o workflow será executado
 jobs: # Definição dos jobs do workflow (Passo a passo da tarefa que será automatizada)
   frontend-workflow: # Nome do job
     runs-on: ubuntu-latest # Ambiente onde o job será executado (Sistema operacional)
-
-    defaults: # Configurações padrão para os passos do job
-      run:
-        working-directory: Frontend # Diretório de trabalho para os comandos run
 
     steps: # Passos do job
     - uses: actions/checkout@v3 # Passo para fazer checkout do código (Realiza um clone do repositório)
@@ -30,3 +26,4 @@ jobs: # Definição dos jobs do workflow (Passo a passo da tarefa que será auto
 
     - name: Realizando os testes unitários # Passo para executar os testes unitários
       run: npm test
+      working-directory: Backend # Diretório de trabalho para os comandos run
