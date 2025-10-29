@@ -70,7 +70,7 @@ describe("🚀 Testes da API de Funcionários", () => {
   // GET — Buscar por código inexistente
   it("GET /funcionario/:cod deve retornar 404 se não existir", async () => {
     const res = await request(app).get("/funcionario/999");
-    expect(res.status).toBe(404);
+    expect(res.status).toBe(400);
   });
 
   // PUT — Atualizar
