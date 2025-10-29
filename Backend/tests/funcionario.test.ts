@@ -70,12 +70,19 @@ describe("🚀 Testes da API de Funcionários", () => {
   // GET — Buscar por código inexistente
   it("GET /funcionario/:cod deve retornar 404 se não existir", async () => {
     const res = await request(app).get("/funcionario/999");
-    expect(res.status).toBe(400);
+    expect(res.status).toBe(404);
   });
 
   // PUT — Atualizar
   // Criar....
 
   // DELETE — Remover
-  // Criar....
+  /*
+  it("DELETE /funcionario/:cod deve deletar um funcionário existente", async () => {
+    const res = await request(app).delete("/funcionario/1");
+
+    expect(res.status).toBe(200);
+    expect(res.text).toContain("deletado");
+  });
+  */
 });

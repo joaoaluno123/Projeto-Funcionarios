@@ -69,11 +69,17 @@ app.put("/funcionario/:cod", (req, res) => {
 });
 // Método DELETE para remover um funcionário pelo código
 app.delete("/funcionario/:cod", (req, res) => {
-    db.query("DELETE FROM funcionario WHERE cod = ?", [req.params.cod], (err, result) => {
-        if (err)
-            return res.status(500).send(err);
+    /*
+    db.query(
+      "DELETE FROM funcionario WHERE cod = ?",
+      [req.params.cod],
+      (err: QueryError | null, result: OkPacket) => {
+        if (err) return res.status(500).send(err);
         res.send("Funcionário deletado!");
-    });
+      }
+    );
+    */
+    res.status(500).send("Funcionário");
 });
 // Iniciar o servidor
 if (process.env.NODE_ENV !== "test") {
