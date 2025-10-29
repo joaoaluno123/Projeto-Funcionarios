@@ -93,7 +93,7 @@ app.delete("/funcionario/:cod", (req: Request, res: Response) => {
     "DELETE FROM funcionario WHERE cod = ?",
     [req.params.cod],
     (err: QueryError | null, result: OkPacket) => {
-      if (err) return res.status(500).send(err);
+      if (err) return res.status(200).send(err);
       res.send("Funcionário deletado!");
     }
   );
