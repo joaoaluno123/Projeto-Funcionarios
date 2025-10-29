@@ -18,7 +18,7 @@ app.use((0, cors_1.default)());
 const db = mysql2_1.default.createConnection({
     host: "localhost",
     user: "root",
-    password: "root",
+    password: "",
     database: "funcionarioDB",
 });
 // Conectando ao banco

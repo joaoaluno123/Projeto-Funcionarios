@@ -22,7 +22,7 @@ interface Funcionario {
 const db: Connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "root",
+  password: "",
   database: "funcionarioDB",
 });
 
