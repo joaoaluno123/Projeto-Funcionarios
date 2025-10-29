@@ -25,5 +25,7 @@
   `git push`
 * Verificar o *workflow*
 * Corrigir o método **DELETE**, tirar o comentário e remover a última linha
+  - Utilizar o comando `npx tsc` para converter o código *Typescript* em *Javascript*
+* Fazer o commit e verificar novamente o *workflow*
 * Realizar um novo commit e verificar novamente o *workflow*
 * Fazer os testes para **PUT (Atualizar)** e **GET (Encontrar código)**  
