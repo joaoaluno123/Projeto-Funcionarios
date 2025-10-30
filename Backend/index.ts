@@ -13,7 +13,7 @@ interface Funcionario {
 }
 
 /* Configuração do banco de dados (O banco deve existir) 
- *
+ 
  * Caso o banco não exista, execute o comando: 
  * CREATE DATABASE funcionarioDB;
  *
